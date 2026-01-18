@@ -1,0 +1,125 @@
+:root {
+    /* Dark Mode Palette */
+    --bg-main: #121212;       /* Latar belakang utama sangat gelap */
+    --bg-card: #1e1e1e;       /* Latar belakang kartu sedikit lebih terang */
+    --text-primary: #e0e0e0;  /* Teks utama (off-white) */
+    --text-secondary: #a0a0a0;/* Teks sekunder (abu-abu) */
+    --accent-green: #00e676;  /* Hijau terang untuk hasil/total */
+    --accent-gold: #ffc107;   /* Emas untuk aksen garis */
+    --input-bg: #2d2d2d;      /* Latar belakang input */
+    --border-color: #333333;  /* Warna border halus */
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 20px;
+    /* Shadow yang lebih dalam dan halus untuk dark mode */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+h2 {
+    color: var(--text-primary);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--accent-gold);
+    padding-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1.05em;
+    transition: all 0.3s ease;
+}
+
+/* Efek fokus agar terasa modern */
+input:focus {
+    outline: none;
+    border-color: var(--accent-green);
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.2);
+}
+
+input::placeholder {
+    color: #666;
+}
+
+.result-box {
+    background: #252525; /* Sedikit berbeda dari kartu utama */
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 25px;
+    border: 1px solid var(--border-color);
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: var(--text-secondary);
+}
+
+.result-item span:last-child {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.total {
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: var(--accent-green) !important; /* Warna hijau neon */
+    letter-spacing: 0.5px;
+}
+
+.total span:last-child {
+    color: var(--accent-green) !important;
+}
+
+.info {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.4;
+}

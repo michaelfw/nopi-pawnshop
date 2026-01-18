@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Nopi Pawnshop</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="card">
+            <h2>Nopi Pawnshop</h2>
+            
+            <div class="input-group">
+                <label>Barang Jaminan</label>
+                <input type="text" id="jaminan" placeholder="Contoh: Logam Mulia 24 Karat 1 Gram" oninput="hitung()">
+            </div>
+            
+            <div class="input-group">
+                <label>Nilai Jual Barang Jaminan (Rp)</label>
+                <input type="number" id="nilai" placeholder="Contoh: 2500000" oninput="hitung()">
+            </div>
+
+            <div class="input-group">
+                <label>Nilai Taksiran Barang Jaminan (92%)</label>
+                <input readonly type="text" id="taksiran" placeholder="Rp 0">
+            </div>
+
+            <div class="input-group">
+                <label>Pokok Pinjaman (Rp)</label>
+                <input type="number" id="pokok" placeholder="Contoh: 1500000" oninput="hitung()">
+            </div>
+
+            <div class="input-group">
+                <label>Lama Pinjaman (Hari)</label>
+                <input type="number" id="hari" placeholder="Contoh: 30" oninput="hitung()">
+            </div>
+
+            <div class="result-box">
+                <div class="result-item">
+                    <span>Barang Jaminan:</span>
+                    <span id="res-jaminan">-</span>
+                </div>
+                <div class="result-item">
+                    <span>Nilai Jual (Rp):</span>
+                    <span id="res-nilai">Rp 0</span>
+                </div>
+                <div class="result-item">
+                    <span>Nilai Taksiran (Rp):</span>
+                    <span id="res-taksiran">Rp 0</span>
+                </div>
+                <div class="result-item">
+                    <span>Pokok Pinjaman:</span>
+                    <span id="res-pokok">Rp 0</span>
+                </div>
+                <div class="result-item">
+                    <span>Lama Pinjaman (Hari):</span>
+                    <span id="res-hari">0 Hari</span>
+                </div>
+                <div class="result-item">
+                    <span>Biaya Admin (Tetap):</span>
+                    <span id="res-admin">Rp 20.000</span>
+                </div>
+                <div class="result-item">
+                    <span>Jumlah Periode (15 hari):</span>
+                    <span id="res-periode">0 Periode</span>
+                </div>
+                <div class="result-item">
+                    <span>Total Bunga (Sewa Modal):</span>
+                    <span id="res-bunga">Rp 0</span>
+                </div>
+                <div class="result-item total">
+                    <span>Total Pelunasan:</span>
+                    <span id="res-total">Rp 20.000</span>
+                </div>
+            </div>
+
+            <p class="info">
+                Sistem periode pembulatan ke atas.<br>Bunga 1,2% per 15 hari dari pokok pinjaman.
+            </p>
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>
