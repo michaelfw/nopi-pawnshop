@@ -45,6 +45,15 @@ h2 {
     letter-spacing: 0.5px;
 }
 
+p {
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    letter-spacing: 0.4px;
+}
+
 .input-group {
     margin-bottom: 20px;
 }
